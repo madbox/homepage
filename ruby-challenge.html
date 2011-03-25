@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>ruby-challenge</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2010-08-27 21:19:01 MSD"/>
+<meta name="author" content="Michael Barablin"/>
+<style type="text/css">
+ <![CDATA[
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color:lightblue; font-weight:normal }
+  .target { }
+  .timestamp { color: grey }
+  .timestamp-kwd { color: CadetBlue }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+ ]]>
+</style>
+</head><body>
+<h1 class="title">ruby-challenge</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Знакомство с Ruby и Ruby On Rails.</a>
+<ul>
+<li><a href="#sec-1.1">1.1 Кто я</a></li>
+<li><a href="#sec-1.2">1.2 Ruby</a>
+<ul>
+<li><a href="#sec-1.2.1">1.2.1 Происхождение</a></li>
+<li><a href="#sec-1.2.2">1.2.2 Структура</a></li>
+</ul>
+</li>
+<li><a href="#sec-1.3">1.3 Ruby on Rails</a></li>
+<li><a href="#sec-1.4">1.4 Использование</a>
+<ul>
+<li><a href="#sec-1.4.1">1.4.1 Отличия от популярных(PHP, Python e.t.c.)</a></li>
+<li><a href="#sec-1.4.2">1.4.2 Плюшки!</a></li>
+<li><a href="#sec-1.4.3">1.4.3 Примеры кода</a></li>
+<li><a href="#sec-1.4.4">1.4.4 Извесные паттерны</a></li>
+<li><a href="#sec-1.4.5">1.4.5 Готовые библиотеки, gem, gemcutter</a></li>
+</ul>
+</li>
+<li><a href="#sec-1.5">1.5 Редакторы, IDE</a></li>
+<li><a href="#sec-1.6">1.6 Известные веб-проекты</a>
+<ul>
+<li><a href="#sec-1.6.1">1.6.1 Зарубежные проекты</a></li>
+<li><a href="#sec-1.6.2">1.6.2 Российские проекты</a></li>
+</ul>
+</li>
+<li><a href="#sec-1.7">1.7 Литература</a>
+<ul>
+<li><a href="#sec-1.7.1">1.7.1 Книги</a></li>
+<li><a href="#sec-1.7.2">1.7.2 Интернет ресурсы</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">1 Знакомство с Ruby и Ruby On Rails.</h2>
+<div id="text-1">
+
+
+</div>
+
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1">1.1 Кто я</h3>
+<div id="text-1.1">
+
+<p>Меня зовут Бараблин Михаил, работаю разработчиком ПО в
+Хостинг-провайдере Locum.ru. Наша великая задача не только
+предоставление качественного классического LAMP хостинга, но и
+популяризация современных технологий, таких как: Ruby и
+RubyOnRails, Python и Django. 
+</p>
+<p>
+С Ruby я познакомился примерно 3 года назад и был сразу же очарован
+простотой и элегантностью конструкций. На этом языке хочется писать
+и меньше чем через пол года я уже использовал его на работе
+постоянно. Еще через пол года я перешел на разравотку с помощью фреймворка Ruby on Rails.
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2" class="outline-3">
+<h3 id="sec-1.2">1.2 Ruby</h3>
+<div id="text-1.2">
+
+
+</div>
+
+<div id="outline-container-1.2.1" class="outline-4">
+<h4 id="sec-1.2.1">1.2.1 Происхождение</h4>
+<div id="text-1.2.1">
+
+<p>Ruby родился 23 февраля 1993 года, а спустя 2 года, в декабре
+1995го вышла в свет версия 0.95, с которой начинается официальная
+разработчик ПО. В японии язык приобрел известность очень быстро —
+жизнь языка. Создатель Ruby — Юкихиро Мацумото (Matz), японский
+уже в 1995 году. Популяризации в других странах долгое время
+препятствовало наличие документации только на японском
+языке. Только в 1997 году появилась первая англо-язычная
+литература, а в 1998 первый форум — ruby-talk.
+</p>
+<p>
+Сейчас Ruby входит в стандартную поставку большинства
+дистрибутивов \*nix ОС, доступны реализации для Windows и Mac OS.
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2.2" class="outline-4">
+<h4 id="sec-1.2.2">1.2.2 Структура</h4>
+<div id="text-1.2.2">
+
+<p>Ruby является наследником таких языков как: Perl, Smalltalk,
+Eiffel, Ada, and Lisp. Само название Ruby(англ. рубин) навеяно
+языком Perl(англ. pearl — жемчужина). Во главу угла при разработке
+языка ставились удобство разработчика, и полностью
+объектно-ориентированная модель. От Perl, Ruby унаследовал
+идеологию наличия множества способов решения одной и тойже
+задачи. Объекно-ориентированная модель напоминает Smalltalk.
+</p>
+<p>
+Синтаксис руби, на сколько это возможно, приближается к языку
+человека, одновременно не накладывает строгих ограничений на
+"пунктуацию". Этим, а также лаконичностью, обеспечивается легкое
+чтение кода и простота конструкций.
+</p>
+<p>
+Ruby находится на стыке функционального и императивного подходов к
+программированию, что позволяет использовать плюсы обоих подходов.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-1.3" class="outline-3">
+<h3 id="sec-1.3">1.3 Ruby on Rails</h3>
+<div id="text-1.3">
+
+<p>Ruby on Rails(RoR) — Это фреймворк (программный каркас) для быстрой
+и удобной разработки современных web-приложений написанный на языке Ruby. В основе
+архитектуры лежит принцип MVC(Model-View-Controller). Ядро
+фреймворка объединено с инструментами для работы с различными
+СУБД(activerecord), автоматического тестирования, пошагового
+изменения структуры БД(migrations).
+</p>
+<p>
+Первый стабильный релиз был опубликован в илюле 2004 года Дэвидом
+Хейнемейером Ханссоном. Сейчас RoR активно разрабатывается
+учасниками Rails Core Team, при поддержке компании
+37signals. Обновления и исправления выходят каждые несколько
+месяцев, а в ближайшее время ожидается переход на следующую,
+серъёзно обновленную, версию фреймворка.
+</p>
+<p>
+Строгая система разположения файлов различных подсистем и множество
+готовых к использованию инструментов сильно повлияла на упрощение
+разработки типичных задач. Ориентированность на принцип convention
+over configuration (Соглашения важнее конфигурирования), позволяет
+получать рабочие реализации типовых задач при минимальном
+вмешательстве в настройки фреймворка, и минимальном количестве
+кода.
+</p>
+<p>
+Для новичков в веб-разработке фреймворк будет прост для
+изучения. Уже через пару часов после знакомства реализация блога
+или фотогалереи на RoR за 10 минут не будет казаться чем-то
+сложным. Для профессионалов RoR предоствляет широчайшие возможности
+настройки и выбора нструментов: использование сторонних
+шаблонизаторов, тестовых фреймворков, множество плагинов с готовой
+функциональностью и т.д.
+</p>
+<p>
+Такая простота совмещенная с гибкостью сильно повлияла на
+популярность фреймворка уже в первые месяцы после релиза. Первых версий.  
+</p></div>
+
+</div>
+
+<div id="outline-container-1.4" class="outline-3">
+<h3 id="sec-1.4">1.4 Использование</h3>
+<div id="text-1.4">
+
+
+</div>
+
+<div id="outline-container-1.4.1" class="outline-4">
+<h4 id="sec-1.4.1">1.4.1 Отличия от популярных(PHP, Python e.t.c.)</h4>
+<div id="text-1.4.1">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.2" class="outline-4">
+<h4 id="sec-1.4.2">1.4.2 Плюшки!</h4>
+<div id="text-1.4.2">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.3" class="outline-4">
+<h4 id="sec-1.4.3">1.4.3 Примеры кода</h4>
+<div id="text-1.4.3">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.4" class="outline-4">
+<h4 id="sec-1.4.4">1.4.4 Извесные паттерны</h4>
+<div id="text-1.4.4">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.5" class="outline-4">
+<h4 id="sec-1.4.5">1.4.5 Готовые библиотеки, gem, gemcutter</h4>
+<div id="text-1.4.5">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1.5" class="outline-3">
+<h3 id="sec-1.5">1.5 Редакторы, IDE</h3>
+<div id="text-1.5">
+
+<p>Сейчас поддержка Ruby есть в большинстве редакторов и IDE, начиная
+от emacs и vim, заканчивая TextMate, Eclipse, NetBeans, MS
+VisualStudio. Так же существуют и специализированые IDE для работы
+с Ruby и RoR, например RubyMine, RadRails и др.
+</p></div>
+
+</div>
+
+<div id="outline-container-1.6" class="outline-3">
+<h3 id="sec-1.6">1.6 Известные веб-проекты</h3>
+<div id="text-1.6">
+
+<p>На RoR реализовано множество известных и не очень и совсем не
+известных проектов, среди которых есть и высоконагруженные порталы
+и интернет магазины и простые сайты-визитки. Далее приведу пару примеров.
+</p>
+</div>
+
+<div id="outline-container-1.6.1" class="outline-4">
+<h4 id="sec-1.6.1">1.6.1 Зарубежные проекты</h4>
+<div id="text-1.6.1">
+
+<ul>
+<li>
+twitter.com — Социальная сеть коротких сообщений
+</li>
+<li>
+yellowpages.com — Крупный онлайн каталог предприятий
+</li>
+<li>
+scribd.com — Сеть обмена документами
+</li>
+<li>
+slideshare.com — Сеть обмена слайдами и презентациями
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-1.6.2" class="outline-4">
+<h4 id="sec-1.6.2">1.6.2 Российские проекты</h4>
+<div id="text-1.6.2">
+
+<ul>
+<li>
+prophotos.ru — Сайт о фотографии
+</li>
+<li>
+lookatme.ru — Новости моды, музыки, искусства. Афиша мероприятий.
+</li>
+<li>
+sibnovosti.ru — Сибирское новостное агенство
+</li>
+<li>
+gamer.ru — Сообщество игроков
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1.7" class="outline-3">
+<h3 id="sec-1.7">1.7 Литература</h3>
+<div id="text-1.7">
+
+
+</div>
+
+<div id="outline-container-1.7.1" class="outline-4">
+<h4 id="sec-1.7.1">1.7.1 Книги</h4>
+<div id="text-1.7.1">
+
+<ul>
+<li>
+Why's (poignant) Guide to Ruby
+</li>
+<li>
+Programming Ruby 1.9: The Pragmatic Programmers' Guide
+В апреле 2010 года вышло уже третье издание, обновленное в соответствии со спецификой ruby 1.9
+</li>
+<li>
+Agile Web Development with Rails
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-1.7.2" class="outline-4">
+<h4 id="sec-1.7.2">1.7.2 Интернет ресурсы</h4>
+<div id="text-1.7.2">
+
+<ul>
+<li>
+ruby-lang.org
+</li>
+<li>
+rubyonrails.org
+</li>
+<li>
+rubyonrails.ru
+</li>
+<li>
+ru.wikipedia.org/wiki/Ruby
+</li>
+<li>
+storecrowd.com/blog/top-50-ruby-on-rails-websites
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble"><p class="author"> Author: Michael Barablin
+<a href="mailto:michael@michael-laptop">&lt;michael@michael-laptop&gt;</a>
+</p>
+<p class="date"> Date: 2010-08-27 21:19:01 MSD</p>
+<p>HTML generated by org-mode 6.13 in emacs 23</p>
+</div></body>
+</html>
