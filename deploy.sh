@@ -1,1 +1,1 @@
-ssh 78.47.144.6 "cd /home/michael/projects/homepage; git pull git@github.com:madbox/homepage.git master"
+ssh michael@mad-box.ru "cd /home/michael/projects/homepage; git pull git@github.com:madbox/homepage.git master"
