@@ -1,2 +1,2 @@
 # pre 2015 hosting # ssh michael@mad-box.ru "cd /home/michael/projects/homepage; git pull git@github.com:madbox/homepage.git master"
-ssh hosting_mbarablin@calcium.locum.ru "cd ~/projects/static/; git pull git@github.com:madbox/homepage.git"
+ssh hosting_mbarablin@calcium.locum.ru "cd ~/projects/static/; git pull"
