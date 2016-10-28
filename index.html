@@ -7,6 +7,7 @@
     <style type="text/css">
       body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
       div.dialog {
+        position: relative;
         width: 20em;
         padding: 1em 4em;
         margin: 4em auto 0 auto;
@@ -15,10 +16,94 @@
       div.dialog ul {
         text-align: left;
       }
-    </style>
+
+    /* Современные браузеры, кроме Chrome, Opera, Safari */
+    @keyframes go-left-right {   /* назовём анимацию: "go-left-right" */
+      from {
+        left: -30px;               /* от: left: 0px */
+      }
+      to {
+        left: calc(100% - 50px);
+      }
+    }
+
+    @keyframes chg-width {
+      from {
+        width: 50px;
+      }
+      to {
+        width: 130px;
+      }
+    }
+
+    .progress {
+      /* применить анимацию go-left-right */
+      /* продолжительность 3s */
+      /* количество раз: бесконечное (infinite) */
+      /* менять направление анимации каждый раз (alternate) */
+
+      position: absolute;
+      /* border: 2px solid green; */
+      top: 30px;
+      left: -20px;
+      width: 60px;
+      height: 50px;
+      background: white;
+      font-size: 200px;
+      font-weight: bolder;
+      color: #000;
+    }
+
+    .a1 {
+
+      animation-name: go-left-right, chg-width;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      cubic-bezier(.5,0,.5,1);
+
+      height: 24px;
+    }
+
+    .a2 {
+      animation: go-left-right 7s infinite normal;
+      animation-delay: 2s;
+      cubic-bezier(.5,0,.5,1);
+
+      top: 55px;
+
+      height: 10px;
+    }
+
+    .a3 {
+      animation: go-left-right 9s infinite normal;
+      animation-delay: 4s;
+      cubic-bezier(.5,0,.5,1);
+
+      top: 64px;
+      height: 20px;
+    }
+
+    a {
+      color: silver;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #ddd;
+    }
+
+    ul {
+      list-style: none;
+    }
+  </style>
+
   </head>
   <body>
+    
     <div class="dialog">
+      <div class="progress a1"></div>
+      <div class="progress a2"></div>
+      <div class="progress a3"></div>
       <h1>☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷</h1>
       <ul>
         <li><a href="https://www.facebook.com/mikle.barablin">Facebook</a></li>
