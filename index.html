@@ -11,13 +11,12 @@
         width: 20em;
         padding: 1em 4em;
         margin: 4em auto 0 auto;
-	color: #aaa;
+        color: #aaa;
       }
       div.dialog ul {
         text-align: left;
       }
 
-    /* Современные браузеры, кроме Chrome, Opera, Safari */
     @keyframes go-left-right {   /* назовём анимацию: "go-left-right" */
       from {
         left: -30px;               /* от: left: 0px */
@@ -37,11 +36,6 @@
     }
 
     .progress {
-      /* применить анимацию go-left-right */
-      /* продолжительность 3s */
-      /* количество раз: бесконечное (infinite) */
-      /* менять направление анимации каждый раз (alternate) */
-
       position: absolute;
       /* border: 2px solid green; */
       top: 30px;
@@ -55,7 +49,6 @@
     }
 
     .a1 {
-
       animation-name: go-left-right, chg-width;
       animation-duration: 12s;
       animation-iteration-count: infinite;
@@ -70,7 +63,7 @@
       animation-delay: 2s;
       cubic-bezier(.5,0,.5,1);
 
-      top: 55px;
+      top: 52px;
 
       height: 10px;
     }
@@ -99,7 +92,6 @@
 
   </head>
   <body>
-    
     <div class="dialog">
       <div class="progress a1"></div>
       <div class="progress a2"></div>
