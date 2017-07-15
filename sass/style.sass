@@ -46,7 +46,7 @@ body
   height: 1px
   background: transparent
   box-shadow: $shadows-small
-  animation: animStar 30s linear infinite
+  animation: animStar 50s linear infinite
 
   &:after
     content: " "
@@ -95,7 +95,6 @@ body
   color: #FFF
   font-family: 'lato',sans-serif
   font-weight: 300
-  letter-spacing: 10px
 
 $a-tags: 'a, a:active, a:hover, a:visited'
 $a-tags-hover: 'a:active, a:hover'
@@ -114,8 +113,10 @@ $a-tags-hover: 'a:active, a:hover'
 
 #title
   margin: 0 auto
-  width: 50%
-  font-size: 50px
+  margin-top: 5%
+  width: 80%
+  font-size: 6ex
+  letter-spacing: 0.4ex
 
   span
     background: -webkit-linear-gradient(white, #38495a)
@@ -124,13 +125,13 @@ $a-tags-hover: 'a:active, a:hover'
 
   ul
     margin-right: 50px
+    margin-top: 10px
     text-align: left
-    font-size: 10px
-    letter-spacing: 7px
     list-style: none
-
+    line-height: 0.8
     a
-      font-size: 20px
+      font-size: 1ex
+      letter-spacing: 0.4ex
 
 @keyframes animStar
   from
@@ -149,11 +150,13 @@ $a-tags-hover: 'a:active, a:hover'
   margin-top: 16px
   height: 64px
   background-color: #565656
+  background: -webkit-linear-gradient(#363636, #565656)
   overflow: hidden
 
 #line
   width: $map-size*2px
-  height: 28px
-  background-color: #565656
-  border-bottom: 2px dashed #868686
-  animation: animStar 100s linear infinite
+  margin-top: 26px
+  height: 0px
+  background-color: #464646
+  border-bottom: 2px dashed #595959
+  animation: animStar 20s linear infinite
