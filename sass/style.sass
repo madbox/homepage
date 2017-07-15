@@ -1,0 +1,159 @@
+@import compass
+
+
+// pixel star effect taken from:
+// https://codepen.io/saransh/pen/BKJun
+
+// Made by @screenshake
+// linkedin.com/in/saranshsinha
+
+
+// n is number of stars required
+$map-size: 2000
+
+@function multiple-box-shadow ($n)
+  $x: random($map-size)
+  $y: random($map-size)
+  $value: '#{$x}px #{$y}px #FFF, #{$map-size + $x}px #{$y}px #FFF'
+
+  @for $i from 2 through $n
+    $x: random($map-size)
+    $y: random($map-size)
+
+    $value: '#{$value} , #{$x}px #{$y}px #FFF, #{$map-size + $x}px #{$y}px #FFF'
+
+  @return unquote($value)
+
+$shadows-small:  multiple-box-shadow(700)
+$shadows-medium: multiple-box-shadow(200)
+$shadows-big:    multiple-box-shadow(100)
+
+html
+  height: 100%
+
+body
+  background: black
+  margin: 0 0
+  height: 100%
+
+#starway
+  height: 70%
+  background: radial-gradient(ellipse at bottom, #243447 0%, #090A0F 100%)
+  overflow: hidden
+
+#stars
+  width: 1px
+  height: 1px
+  background: transparent
+  box-shadow: $shadows-small
+  animation: animStar 30s linear infinite
+
+  &:after
+    content: " "
+    position: absolute
+    top: -2000px
+    width: 1px
+    height: 1px
+    background: transparent
+    box-shadow: $shadows-small
+
+#stars2
+  width: 2px
+  height: 2px
+  background: transparent
+  box-shadow: $shadows-medium
+  animation: animStar 100s linear infinite
+
+  &:after
+    content: " "
+    position: absolute
+    top: -2000px
+    width: 2px
+    height: 2px
+    background: transparent
+    box-shadow: $shadows-medium
+
+#stars3
+  width: 3px
+  height: 3px
+  background: transparent
+  box-shadow: $shadows-big
+  animation: animStar 150s linear infinite
+
+  &:after
+    content: " "
+    position: absolute
+    top: -2000px
+    width: 3px
+    height: 3px
+    background: transparent
+    box-shadow: $shadows-big
+
+/* other things */
+
+*
+  color: #FFF
+  font-family: 'lato',sans-serif
+  font-weight: 300
+  letter-spacing: 10px
+
+$a-tags: 'a, a:active, a:hover, a:visited'
+$a-tags-hover: 'a:active, a:hover'
+
+#{$a-tags}
+  background: -webkit-linear-gradient(white, #38495a)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  text-decoration: none
+
+
+#{$a-tags-hover}
+  background: -webkit-linear-gradient(white, #7e9dbc)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+#title
+  margin: 0 auto
+  width: 50%
+  font-size: 50px
+
+  span
+    background: -webkit-linear-gradient(white, #38495a)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+  ul
+    margin-right: 50px
+    text-align: left
+    font-size: 10px
+    letter-spacing: 7px
+    list-style: none
+
+    a
+      font-size: 20px
+
+@keyframes animStar
+  from
+    transform: translateX(0px)
+  to
+    transform: translateX(-2000px)
+
+/* Rider */
+
+#rider
+  position: absolute
+  margin-top: -128px
+  margin-left: 20%
+
+#road
+  margin-top: 16px
+  height: 64px
+  background-color: #565656
+  overflow: hidden
+
+#line
+  width: $map-size*2px
+  height: 28px
+  background-color: #565656
+  border-bottom: 2px dashed #868686
+  animation: animStar 100s linear infinite

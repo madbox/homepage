@@ -1,108 +1,32 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Пустота</title>
-    <style type="text/css">
-      body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-      div.dialog {
-        position: relative;
-        width: 20em;
-        padding: 1em 4em;
-        margin: 4em auto 0 auto;
-        color: #aaa;
-      }
-      div.dialog ul {
-        text-align: left;
-      }
-
-    @keyframes go-left-right {   /* назовём анимацию: "go-left-right" */
-      from {
-        left: -30px;               /* от: left: 0px */
-      }
-      to {
-        left: calc(100% - 50px);
-      }
-    }
-
-    @keyframes chg-width {
-      from {
-        width: 50px;
-      }
-      to {
-        width: 130px;
-      }
-    }
-
-    .progress {
-      position: absolute;
-      /* border: 2px solid green; */
-      top: 30px;
-      left: -20px;
-      width: 60px;
-      height: 50px;
-      background: white;
-      font-size: 200px;
-      font-weight: bolder;
-      color: #000;
-    }
-
-    .a1 {
-      animation-name: go-left-right, chg-width;
-      animation-duration: 12s;
-      animation-iteration-count: infinite;
-      animation-direction: normal;
-      cubic-bezier(.5,0,.5,1);
-
-      height: 24px;
-    }
-
-    .a2 {
-      animation: go-left-right 7s infinite normal;
-      animation-delay: 2s;
-      cubic-bezier(.5,0,.5,1);
-
-      top: 52px;
-
-      height: 10px;
-    }
-
-    .a3 {
-      animation: go-left-right 9s infinite normal;
-      animation-delay: 4s;
-      cubic-bezier(.5,0,.5,1);
-
-      top: 64px;
-      height: 20px;
-    }
-
-    a {
-      color: silver;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #ddd;
-    }
-
-    ul {
-      list-style: none;
-    }
-  </style>
-
   </head>
   <body>
-    <div class="dialog">
-      <div class="progress a1"></div>
-      <div class="progress a2"></div>
-      <div class="progress a3"></div>
-      <h1>☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷</h1>
-      <ul>
-        <li><a href="https://www.facebook.com/mikle.barablin">Facebook</a></li>
-        <li><a href="https://ru.linkedin.com/in/mikhailbarablin">LinkedIn</a></li>
-        <li><a href="https://vk.com/mbarablin">ВКонтакте</a></li>
-        <li><a href="https://github.com/madbox">GitHub</a></li>
-      </ul>
+    <div id='starway'>
+      <div id='stars'></div>
+      <div id='stars2'></div>
+      <div id='stars3'></div>
+      <div id='title'>
+        <span>mdbx: </span>
+        <span>feature list</span>
+        <ul>
+          <li><a href="https://www.facebook.com/mikle.barablin">Facebook</a></li>
+          <li><a href="https://ru.linkedin.com/in/mikhailbarablin">LinkedIn</a></li>
+          <li><a href="https://vk.com/mbarablin">ВКонтакте</a></li>
+          <li><a href="https://github.com/madbox">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id='road'>
+      <div id='line'></div>
+    </div>
+    <div id='rider'>
+      <img src='rider.png' />
     </div>
   </body>
 </html>
