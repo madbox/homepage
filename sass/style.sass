@@ -145,6 +145,32 @@ $a-tags-hover: 'a:active, a:hover'
   position: absolute
   margin-top: -128px
   margin-left: 20%
+  animation: rideIn 10s ease-out
+
+/*  animation: rideIn 10s ease-out 1 */
+
+@keyframes rideIn
+  from
+    margin-left: -128px
+  to
+    margin-left: 20%
+
+@keyframes rideOn
+  0%
+    margin-left: 20%
+    margin-top: -128px
+  25%
+    margin-left: 22%
+    margin-top: -138px
+  50%
+    margin-left: 19%
+    margin-top: -146px
+  75%
+    margin-left: 18%
+    margin-top: -122px
+  100%
+    margin-left: 20%
+    margin-top: -128px
 
 #moon
   position: absolute
