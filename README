@@ -1,1 +1,19 @@
+# intro
+
 Selfish stuff. This is my homepage, located at mdbx.ru
+
+# installation in 2021
+
+1. RVM + ruby 
+    $ ruby -v
+    ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-linux]
+2. gem install compass
+    $ compass -v
+    Compass 1.0.3 (Polaris)
+    Copyright (c) 2008-2021 Chris Eppstein
+    Released under the MIT License.
+    Compass is charityware.
+    Please make a tax deductable donation for a worthy cause: http://umdf.org/compass
+3. compass compile
+    some deprecation warnings.
+    its alive!
